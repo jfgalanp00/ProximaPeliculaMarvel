@@ -3,3 +3,14 @@ Este proyecto utiliza PHP y la API de WhenIsTheNextMCUFilm para mostrar informac
 
 ### Captura 📋
 ![image](https://github.com/user-attachments/assets/b17eaf58-33d0-4c55-bcfe-ddcbd9432660)
+
+
+# Funcionalidades
+Visualización de póster: Muestra el póster oficial de la próxima película de Marvel.
+Cuenta regresiva: Indica cuántos días faltan para el estreno de la película.
+Información de la película siguiente: También muestra el título de la película que sigue en la lista de estrenos del MCU.
+
+# Tecnologías Utilizadas
+PHP: Para realizar la solicitud a la API y procesar la respuesta.
+cURL: Utilizado para hacer la solicitud HTTP a la API de Marvel.
+Pico CSS: Biblioteca de CSS ligera para un diseño sencillo y rápido
