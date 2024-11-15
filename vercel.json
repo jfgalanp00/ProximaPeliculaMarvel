@@ -1,4 +1,10 @@
 {
+  "builds": [
+    {
+      "src": "api/index.php",
+      "use": "@vercel/php"
+    }
+  ],
   "functions": {
     "api/index.php": {
       "runtime": "vercel-php@0.7.3"
@@ -11,5 +17,4 @@
       "dest": "/api/index.php"
     }
   ],
-  "buildCommand": "composer install"
 }
