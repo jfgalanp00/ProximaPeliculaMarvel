@@ -6,12 +6,22 @@
 
     // indicar que queremos recibir el resultado de la peticion y no mostrar en pantalla
     curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
+	// Deshabilitamos la verificación SSL (solo para propósitos de desarrollo y pruebas)
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
     /* Ejecutar la peticion y guardamos el resultado */
     $result = curl_exec( $ch );
+	
+	// Verificamos si hubo un error con la solicitud
+	if (curl_errno($ch)) {
+		echo "Error cURL: " . curl_error($ch);
+		exit;
+	}
+	
+	// Decodificamos la respuesta JSON
     $data = json_decode( $result, true );
     
+	// Cerramos la sesión de cURL
     curl_close( $ch );    
 ?>
 
